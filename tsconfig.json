@@ -1,12 +1,5 @@
 {
   "compilerOptions": {
-    "target": "es2018",
-    "module": "commonjs",
-    "sourceMap": true,
-    "rootDir": ".",
-    "outDir": "../build/"
-  },
-  "compilerOptions": {
     "baseUrl": ".",
     "target": "es5",
     "sourceMap": true,
