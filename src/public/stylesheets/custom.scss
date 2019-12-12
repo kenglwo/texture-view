@@ -1,0 +1,40 @@
+$body-bg: oldlace;
+$warning: rgb(255, 243, 205);
+$input-group-addon-bg: $warning;
+$input-group-addon-border-color: $warning;
+
+body {
+  background-color: $body-bg;
+}
+.jumbotron {
+    margin-top: 25px;
+    padding: 32px;
+}
+.recipe_card {
+  /* background-color: rgb(255, 243, 205); */
+  /* border-color: rgb(255, 238, 186); */
+}
+.recipe_title {
+    color: #7D940A;
+    white-space: normal;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+.recipe_info {
+    /* width: 300px; */
+    /* margin-top: 30px; */
+    /* white-space: normal; */
+    /* word-wrap: break-word; */
+    font-weight: bold;
+    color: brown;
+    word-wrap: break-word;
+    margin-bottom: 0;
+}
+input[type=checkbox] {
+    -moz-transform: scale( 2 , 2 );
+    -webkit-transform: scale( 2 , 2 );
+    float: left;
+    cursor: pointer;
+}
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';

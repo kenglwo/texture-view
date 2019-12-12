@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "rootDir": ".",
+    "outDir": "./dist"
+  },
+  "exclude": [
+    "spec",
+    "src/**/*.mock.ts",
+    "src/@types/",
+    "src/components/",
+    "src/public/",
+    "src/views/"
+  ],
+  "include": [
+    "src/*.ts",
+    "src/routes/*.ts",
+    "src/routes/api/*.ts"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "sourceMap": true,
+    "rootDir": ".",
+    "outDir": "../build/"
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "sourceMap": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "noEmitOnError": true,
+    "jsx": "react",
+    "paths": { "react-d3-cloud": ["src/@types/react-d3-cloud.d.ts"] },
+    "typeRoots": ["./node_modules/@types", "./src/@types"]
+  },
+  "include": ["src/*", "src/components/*"],
+  "rules": {}
+}
