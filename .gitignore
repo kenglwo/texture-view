@@ -3,3 +3,5 @@
 dist/
 logs/
 spec/
+env/
+src/public/scripts/bundle.js
