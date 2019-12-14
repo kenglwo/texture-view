@@ -2,14 +2,15 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as d3 from "d3";
 import WordCloud from "react-d3-cloud";
-import { WordCloudCategoryElement } from "../models/Types";
+// import { WordCloudCategoryElement } from "../models/Types";
+import { WordCloudCategoryArrayElement } from "../models/Types";
 
 interface Props {
-  wordcloudCategoryElement: WordCloudCategoryElement[];
+  wordcloudCategoryElement: WordCloudCategoryArrayElement[];
   colorStyle: string;
 }
 interface State {
-  wordcloudCategoryElement: WordCloudCategoryElement[];
+  wordcloudCategoryElement: WordCloudCategoryArrayElement[];
   colorStyle: string;
 }
 
@@ -45,7 +46,7 @@ export default class RecipeWordCloudCategory extends React.Component<
       .domain([1, countMax])
       .range([10, 44]);
 
-    const fontSizeMapper = (data: WordCloudCategoryElement): number => {
+    const fontSizeMapper = (data: WordCloudCategoryArrayElement): number => {
       return sizeScale(data.value);
     };
 

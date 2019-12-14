@@ -8,7 +8,8 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import RecipeWordCloudCategory from "./RecipeWordCloudCategory";
 import RecipeInfo from "./RecipeInfo";
-import { WordCloudCategoryElement } from "../models/Types";
+// import { WordCloudCategoryElement } from "../models/Types";
+import { WordCloudCategoryArrayElement } from "../models/Types";
 
 interface Props {
   recipe_id: string;
@@ -19,7 +20,7 @@ interface State {
   recipeId: string;
   advice: string;
   description: string;
-  wordcloudCategoryElement: WordCloudCategoryElement[];
+  wordcloudCategoryElement: WordCloudCategoryArrayElement[];
   colorStyle: string;
 }
 
@@ -39,7 +40,8 @@ export default class RecipeBodyCategory extends React.Component<Props, State> {
   }
 
   public loadWordcloudElement() {
-    const baseUrl = "http://localhost:3000/api/texture_category";
+    // const baseUrl = "http://localhost:3000/api/texture_category";
+    const baseUrl = "http://localhost:3000/api/texture_category_array";
     // const baseUrl = `http://${process.env.HOST}:${process.env.PORT}/api/texture_category`;
     const url = `${baseUrl}?recipe_id=${this.state.recipeId}`;
 
