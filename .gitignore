@@ -1,5 +1,7 @@
-node_modules/
-!node_modules/react-d3-cloud/
+/node_modules/*
+!/node_modules/react-d3-cloud
 dist/
 logs/
 spec/
+env/
+src/public/scripts/bundle.js
