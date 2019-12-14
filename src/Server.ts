@@ -16,6 +16,7 @@ import overviewRouter from "./routes/overview";
 import recipeInfoRouter from "./routes/api/recipe-info";
 import textureRouter from "./routes/api/texture";
 import textureCategoryRouter from "./routes/api/texture_category";
+import textureCategoryArrayRouter from "./routes/api/texture_category_array";
 // visualizeRouter = require("./routes/visualize");
 
 import reactRouter from "./routes/router";
@@ -63,6 +64,7 @@ app.use("/router", reactRouter);
 app.use("/api/recipe-info", recipeInfoRouter);
 app.use("/api/texture", textureRouter);
 app.use("/api/texture_category", textureCategoryRouter);
+app.use("/api/texture_category_array", textureCategoryArrayRouter);
 
 // keep track of access log
 // const logDirectory = path.join(__dirname, "./log");
