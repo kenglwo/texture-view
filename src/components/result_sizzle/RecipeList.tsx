@@ -29,7 +29,6 @@ export default class RecipeList extends React.Component<Props, State> {
   }
 
   public loadDataFromServer(keyword: string, sizzleWord: string) {
-    // const baseUrl = "http://kento/ex-gen-app/api/recipe-info";
     const baseUrl = "http://localhost:3000/api/recipe-info-sizzle";
     const url = `${baseUrl}?keyword=${keyword}&sizzleWord=${sizzleWord}`;
 
@@ -40,7 +39,6 @@ export default class RecipeList extends React.Component<Props, State> {
           this.setState(state => {
             return { items: jsonData };
           });
-          console.log(this.state.items);
         },
         error => {
           this.setState({

@@ -32,7 +32,6 @@ export default class RecipeList extends React.Component<Props, State> {
     // const baseUrl = "http://kento/ex-gen-app/api/recipe-info";
     const baseUrl = "http://localhost:3000/api/recipe-info-thanks";
     const url = `${baseUrl}?keyword=${keyword}&thanksWord=${thanksWord}`;
-    console.log(url);
 
     fetch(url, { mode: "cors" })
       .then(res => res.json())
@@ -41,7 +40,6 @@ export default class RecipeList extends React.Component<Props, State> {
           this.setState(state => {
             return { items: jsonData };
           });
-          console.log(this.state.items);
         },
         error => {
           this.setState({
