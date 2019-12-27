@@ -8,16 +8,16 @@ import Header from "../common/Header";
 interface Props {}
 interface State {}
 
-export default class IndexHeader extends React.Component<Props, State> {
+export default class ResultPageHeader extends React.Component<Props, State> {
   public render() {
     return (
       <Row>
-        <Col md={2} />
-        <Col md={8}>
+        <Col md={3} />
+        <Col md={6}>
           <PageNav />
-          <Header title={"みんなの食感View"} />
+          <Header title={"レシピの検索結果"} />
         </Col>
-        <Col md={2} />
+        <Col md={3} />
       </Row>
     );
   }

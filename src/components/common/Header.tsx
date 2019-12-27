@@ -20,7 +20,9 @@ export default class Header extends React.Component<Props, State> {
       <header>
         <div className={"jumbotron text-center text-nowrap alert-secondary"}>
           <h1>{this.state.title}</h1>
-          <h5>visualize texture words in reviews of a recipe</h5>
+          <h5>
+            aggregate and visualize informative words in reviews of a recipe
+          </h5>
         </div>
       </header>
     );

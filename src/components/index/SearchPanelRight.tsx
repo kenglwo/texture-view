@@ -10,7 +10,7 @@ interface State {}
 export default class SearchPanelRight extends React.Component<Props, State> {
   public render() {
     return (
-      <Col md={6}>
+      <Col md={4}>
         <Card bg="warning">
           <Card.Body>
             <SearchForm />
