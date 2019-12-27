@@ -12,12 +12,12 @@ export default class IndexHeader extends React.Component<Props, State> {
   public render() {
     return (
       <Row>
-        <Col md={3} />
-        <Col md={6}>
+        <Col md={2} />
+        <Col md={8}>
           <PageNav />
           <Header title={"みんなの食感View"} />
         </Col>
-        <Col md={3} />
+        <Col md={2} />
       </Row>
     );
   }

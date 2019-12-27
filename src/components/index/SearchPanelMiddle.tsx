@@ -1,22 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
-import SearchFormSizzle from "./SearchFormSizzle";
+import SearchFormThanks from "./SearchFormThanks";
 
 interface Props {}
 interface State {}
 
-export default class SearchPanelLeft extends React.Component<Props, State> {
+export default class SearchPanelMiddle extends React.Component<Props, State> {
   public render() {
     return (
       <Col md={4}>
-        <Card bg="info">
+        <Card bg="danger">
           <Card.Body>
             <div className={"card-title"}>
-              <h3 id={"texture"} />
+              <h3 id={"thanks"} />
             </div>
-            <SearchFormSizzle />
+            <SearchFormThanks />
           </Card.Body>
         </Card>
       </Col>

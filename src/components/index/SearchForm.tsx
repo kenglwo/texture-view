@@ -14,7 +14,7 @@ interface State {
 class SearchForm extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { keyword: "", texture: "" };
+    this.state = { keyword: "", texture: "厚い" };
     this.textChange = this.textChange.bind(this);
     this.selectChange = this.selectChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,19 +25,20 @@ class SearchForm extends React.Component<Props, State> {
       <Form onSubmit={this.handleSubmit}>
         <Form.Group>
           <Form.Label htmlFor="dish_name">
-            <h3>Dish Name</h3>
+            <h3>キーワード</h3>
           </Form.Label>
           <Form.Control
             as="input"
             type="text"
             name={"dish"}
             id={"dish_name"}
+            className={"mb-3"}
             value={this.state.keyword}
             onChange={this.textChange}
-            placeholder="料理名を入力"
+            placeholder="キーワードを入力"
           />
           <Form.Label htmlFor="texture_name">
-            <h3>Food Texture</h3>
+            <h3>テクスチャ</h3>
           </Form.Label>
           <Form.Control
             as="select"
