@@ -78,8 +78,10 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
         console.log(`------> 検索結果: ${result.rows[0].recipe_count} 件`);
       } else {
         console.log("------> 該当するレシピはありませんでした．");
-        // res.redirect(302, "http://kento/ex-gen-app/noresult");
-        res.redirect(302, `${process.env.HOST}:${process.env.PORT}/noresult`);
+        res.redirect(
+          302,
+          `http://${process.env.HOST}:${process.env.PORT}/noresult`
+        );
       }
 
       _.forEach(result.rows, elem => {
