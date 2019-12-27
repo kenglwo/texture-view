@@ -69,6 +69,7 @@ export type WordCloudCategoryArrayElement = {
 export type WordCloudCategorySizzleElement = {
   text: string;
   value: number;
+  category_big_id: number;
 };
 export type WordCloudCategoryThanksElement = {
   text: string;
