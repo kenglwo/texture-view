@@ -14,9 +14,14 @@ import noresultRouter from "./routes/noresult";
 import compareRouter from "./routes/compare";
 import overviewRouter from "./routes/overview";
 import recipeInfoRouter from "./routes/api/recipe-info";
+import recipeInfoSizzleRouter from "./routes/api/recipe-info-sizzle";
+import recipeInfoThanksRouter from "./routes/api/recipe-info-thanks";
 import textureRouter from "./routes/api/texture";
 import textureCategoryRouter from "./routes/api/texture_category";
 import textureCategoryArrayRouter from "./routes/api/texture_category_array";
+import sizzleRouter from "./routes/api/sizzle_word";
+import thanksRouter from "./routes/api/thanks_word";
+
 // visualizeRouter = require("./routes/visualize");
 
 import reactRouter from "./routes/router";
@@ -62,9 +67,13 @@ app.use("/overview", overviewRouter);
 // app.use("/visualize", visualizeRouter);
 app.use("/router", reactRouter);
 app.use("/api/recipe-info", recipeInfoRouter);
+app.use("/api/recipe-info-sizzle", recipeInfoSizzleRouter);
+app.use("/api/recipe-info-thanks", recipeInfoThanksRouter);
 app.use("/api/texture", textureRouter);
 app.use("/api/texture_category", textureCategoryRouter);
 app.use("/api/texture_category_array", textureCategoryArrayRouter);
+app.use("/api/sizzle_word", sizzleRouter);
+app.use("/api/thanks_word", thanksRouter);
 
 // keep track of access log
 // const logDirectory = path.join(__dirname, "./log");
