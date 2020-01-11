@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import SearchPanelLeft from "./SearchPanelLeft";

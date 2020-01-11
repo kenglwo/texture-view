@@ -1,9 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 import Col from "react-bootstrap/Col";
-import PageNav from "../common_components/PageNav";
-import Header from "../common_components/Header";
-import SearchPanel from "./SearchPanel";
+import PageNav from "../common/PageNav";
+import Header from "../common/Header";
+// import SearchPanel from "./SearchPanel";
+import SearchPanelKeyword from "./SearchPanelKeyword";
 
 interface Props {}
 interface State {}
@@ -14,7 +15,7 @@ export default class ColMd8 extends React.Component<Props, State> {
       <Col md={8}>
         <PageNav />
         <Header title={"みんなの食感View"} />
-        <SearchPanel />
+        <SearchPanelKeyword />
       </Col>
     );
   }
