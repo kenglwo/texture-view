@@ -5,6 +5,7 @@ import IndexPage from "./index/IndexPage";
 import ResultPage from "./result//ResultPage";
 import ResultPageSizzle from "./result_sizzle/ResultPageSizzle";
 import ResultPageThanks from "./result_thanks/ResultPageThanks";
+import ResultPageKeyword from "./result_keyword/ResultPageKeyword";
 import "../public/stylesheets/custom.scss";
 
 interface Props {}
@@ -26,6 +27,10 @@ export default class Router extends React.Component<Props, State> {
         <Route
           path="/result_thanks/:keyword/:thanks_word/:offset"
           component={ResultPageThanks}
+        />
+        <Route
+          path="/result_keyword/:keyword/:offset"
+          component={ResultPageKeyword}
         />
       </BrowserRouter>
     );
