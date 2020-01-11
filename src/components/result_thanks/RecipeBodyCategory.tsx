@@ -40,7 +40,7 @@ export default class RecipeBodyCategory extends React.Component<Props, State> {
   }
 
   public loadWordcloudElement() {
-    // const baseUrl = "http://localhost:3000/api/texture_category";
+    // const baseUrl = "http://localhost:3000/api/texture_category_array";
     const baseUrl = "http://localhost:3000/api/thanks_word";
     // const baseUrl = `http://${process.env.HOST}:${process.env.PORT}/api/texture_category`;
     const url = `${baseUrl}?recipe_id=${this.state.recipeId}`;
