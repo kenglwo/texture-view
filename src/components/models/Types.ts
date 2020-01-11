@@ -10,6 +10,9 @@ export type SearchQueryThanks = {
   keyword: string;
   thanks_word: string;
 };
+export type SearchQueryKeyword = {
+  keyword: string;
+};
 
 export type RecipeItem = {
   recipe_id: string;
@@ -31,6 +34,17 @@ export type RecipeItemThanks = {
   description: string;
   advice: string;
   thanksWord_count: number;
+};
+export type RecipeItemKeyword = {
+  recipe_id: string;
+  user_id: string;
+  title: string;
+  description: string;
+  recipe_count: number;
+  review_count: number;
+  texture_count: number;
+  sizzle_count: number;
+  thanks_count: number;
 };
 
 export type PageNum = {
