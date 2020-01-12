@@ -14,6 +14,7 @@ import { WordCloudCategoryThanksElement } from "../models/Types";
 
 interface Props {
   recipe_id: string;
+  user_id: string;
   description: string;
   // review_count: number;
   // texture_count: number;
@@ -22,6 +23,7 @@ interface Props {
 }
 interface State {
   recipe_id: string;
+  user_id: string;
   description: string;
   // review_count: number;
   // texture_count: number;
@@ -36,6 +38,7 @@ export default class RecipeCardBody extends React.Component<Props, State> {
     super(props);
     this.state = {
       recipe_id: this.props.recipe_id,
+      user_id: this.props.user_id,
       description: this.props.description
       // review_count: this.props.review_count,
       // texture_count: this.props.texture_count,
@@ -107,7 +110,10 @@ export default class RecipeCardBody extends React.Component<Props, State> {
             <Image src="../../img/hamburg.png" fluid={true} />
           </Col>
           <Col md={9}>
-            <RecipeInfo description={this.state.description} />
+            <RecipeInfo
+              description={this.state.description}
+              user_id={this.state.user_id}
+            />
           </Col>
         </Row>
       </Container>

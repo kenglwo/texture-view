@@ -33,13 +33,13 @@ export default class RecipeCard extends React.Component<Props, State> {
           <RecipeCardHeader title={this.state.title} />
           <RecipeCardBody
             recipe_id={this.state.recipe_id}
+            user_id={this.state.user_id}
             description={this.state.description}
           />
         </Card.Body>
         <Card.Footer>
           <RecipeCardFooter
             recipe_id={this.state.recipe_id}
-            user_id={this.state.user_id}
             review_count={this.state.review_count}
             texture_count={this.state.texture_count}
             sizzle_count={this.state.sizzle_count}
