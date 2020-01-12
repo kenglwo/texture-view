@@ -21,7 +21,7 @@ export default class RecipeHeader extends React.Component<Props, State> {
   public render() {
     return (
       <Card.Title>
-        <h4 className={"recipe_title"}>{this.state.title}</h4>
+        <h4 className={"recipe_title"}>{this.props.title}</h4>
       </Card.Title>
     );
   }

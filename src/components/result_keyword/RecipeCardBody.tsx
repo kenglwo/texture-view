@@ -36,17 +36,17 @@ interface State {
 export default class RecipeCardBody extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      recipe_id: this.props.recipe_id,
-      user_id: this.props.user_id,
-      description: this.props.description
-      // review_count: this.props.review_count,
-      // texture_count: this.props.texture_count,
-      // sizzle_count: this.props.sizzle_count,
-      // thanks_count: this.props.thanks_count
-      // wordcloudCategoryElement: [],
-      // colorStyle: "colorful"
-    };
+    // this.state = {
+    //   recipe_id: this.props.recipe_id,
+    //   user_id: this.props.user_id,
+    //   description: this.props.description
+    // review_count: this.props.review_count,
+    // texture_count: this.props.texture_count,
+    // sizzle_count: this.props.sizzle_count,
+    // thanks_count: this.props.thanks_count
+    // wordcloudCategoryElement: [],
+    // colorStyle: "colorful"
+    // };
 
     // this.loadWordcloudElement = this.loadWordcloudElement.bind(this);
     // this.onSelectHandler = this.onSelectHandler.bind(this);
@@ -111,8 +111,8 @@ export default class RecipeCardBody extends React.Component<Props, State> {
           </Col>
           <Col md={9}>
             <RecipeInfo
-              description={this.state.description}
-              user_id={this.state.user_id}
+              description={this.props.description}
+              user_id={this.props.user_id}
             />
           </Col>
         </Row>

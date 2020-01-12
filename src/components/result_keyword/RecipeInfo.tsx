@@ -29,9 +29,9 @@ export default class RecipeInfo extends React.Component<Props, State> {
   public render() {
     return (
       <div>
-        <Card.Text>{this.state.description}</Card.Text>
+        <Card.Text>{this.props.description}</Card.Text>
         <div className="text-right recipe_author">
-          投稿者：{this.state.user_id}
+          投稿者：{this.props.user_id}
         </div>
       </div>
     );

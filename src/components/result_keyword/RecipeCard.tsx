@@ -26,24 +26,27 @@ export default class RecipeCard extends React.Component<Props, State> {
       thanks_count: this.props.thanks_count
     };
   }
+
+  // public componentDidUpdate() {}
+
   public render() {
     return (
       <Card bg="warning" className="mb-5">
         <Card.Body>
-          <RecipeCardHeader title={this.state.title} />
+          <RecipeCardHeader title={this.props.title} />
           <RecipeCardBody
-            recipe_id={this.state.recipe_id}
-            user_id={this.state.user_id}
-            description={this.state.description}
+            recipe_id={this.props.recipe_id}
+            user_id={this.props.user_id}
+            description={this.props.description}
           />
         </Card.Body>
         <Card.Footer>
           <RecipeCardFooter
-            recipe_id={this.state.recipe_id}
-            review_count={this.state.review_count}
-            texture_count={this.state.texture_count}
-            sizzle_count={this.state.sizzle_count}
-            thanks_count={this.state.thanks_count}
+            recipe_id={this.props.recipe_id}
+            review_count={this.props.review_count}
+            texture_count={this.props.texture_count}
+            sizzle_count={this.props.sizzle_count}
+            thanks_count={this.props.thanks_count}
           />
         </Card.Footer>
       </Card>

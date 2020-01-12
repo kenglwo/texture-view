@@ -5,11 +5,14 @@ import CardDeck from "react-bootstrap/CardDeck";
 import RecipeCard from "./RecipeCard";
 import { SearchQueryKeyword, RecipeItemKeyword } from "../models/Types";
 
-interface Props extends SearchQueryKeyword {}
+interface Props extends SearchQueryKeyword {
+  recipe_order: string;
+}
 
 interface State {
   isLoaded: boolean;
   items: RecipeItemKeyword[];
+  recipe_order: string;
 }
 
 export default class RecipeList extends React.Component<Props, State> {
@@ -21,6 +24,7 @@ export default class RecipeList extends React.Component<Props, State> {
 
     this.state = {
       isLoaded: false,
+      recipe_order: "new",
       items: []
     };
     this.loadDataFromServer = this.loadDataFromServer.bind(this);
@@ -29,15 +33,14 @@ export default class RecipeList extends React.Component<Props, State> {
   public loadDataFromServer(keyword: string) {
     // const baseUrl = "http://kento/ex-gen-app/api/recipe-info";
     const baseUrl = "http://localhost:3000/api/recipe-info-keyword";
-    const url = `${baseUrl}?keyword=${keyword}`;
+    const url = `${baseUrl}?keyword=${keyword}&order=${this.props.recipe_order}`;
+    console.log(url);
 
     fetch(url, { mode: "cors" })
       .then(res => res.json())
       .then(
         jsonData => {
-          this.setState(state => {
-            return { items: jsonData };
-          });
+          this.setState({ items: jsonData });
         },
         error => {
           this.setState({
@@ -52,11 +55,25 @@ export default class RecipeList extends React.Component<Props, State> {
     this.loadDataFromServer(this.keyword);
   }
 
+  public componentDidUpdate(prevProps: Props) {
+    console.log(
+      `$$$$$$$$$ prev: ${prevProps.recipe_order}, this: ${this.props.recipe_order}`
+    );
+    if (this.props.recipe_order !== prevProps.recipe_order) {
+      this.loadDataFromServer(this.keyword);
+    }
+  }
+
   public render() {
+    console.log("###########  render RecipeList");
     const items = this.state.items;
+    if (this.state.items.length !== 0) {
+      // console.log(this.state.items[0].title);
+    }
     return (
       <CardDeck style={{ display: "flex", flexDirection: "column" }}>
         {items.map((item, index) => {
+          console.log(`CardList: ${item.title}`);
           return (
             <RecipeCard
               key={String(index)}

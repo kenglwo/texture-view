@@ -66,7 +66,7 @@ export default class RecipeCardFooter extends React.Component<Props, State> {
     switch (wordType) {
       case "texture":
         if (this.state.wordcloud_texture_isloaded === false) {
-          url = `${url}texture_category_array?recipe_id=${this.state.recipe_id}`;
+          url = `${url}texture_category_array?recipe_id=${this.props.recipe_id}`;
           fetch(url, { mode: "cors" })
             .then(res => res.json())
             .then(
@@ -103,7 +103,7 @@ export default class RecipeCardFooter extends React.Component<Props, State> {
         break;
       case "sizzle":
         if (this.state.wordcloud_sizzle_isloaded === false) {
-          url = `${url}sizzle_word?recipe_id=${this.state.recipe_id}`;
+          url = `${url}sizzle_word?recipe_id=${this.props.recipe_id}`;
           fetch(url, { mode: "cors" })
             .then(res => res.json())
             .then(
@@ -112,7 +112,7 @@ export default class RecipeCardFooter extends React.Component<Props, State> {
                   wordcloud_sizzle: jsonData,
                   wordcloud_sizzle_isloaded: true,
                   wordcloud_texture_isvisible: false,
-                  wordcloud_sizzle_isvisible: true // show shordcloud
+                  wordcloud_sizzle_isvisible: true // show wordcloud
                 });
               },
               error => {
@@ -201,8 +201,20 @@ export default class RecipeCardFooter extends React.Component<Props, State> {
     // console.log(`{RecipeBodyCategory: ${this.state.colorStyle}}`);
   }
 
+  public componentDidUpdate(prevProps: Props) {
+    if (this.props.recipe_id !== prevProps.recipe_id) {
+      this.setState({
+        recipe_id: this.props.recipe_id,
+        review_count: this.props.review_count,
+        texture_count: this.props.texture_count,
+        sizzle_count: this.props.sizzle_count,
+        thanks_count: this.props.thanks_count
+      });
+    }
+  }
+
   public render() {
-    if (this.state.review_count === 0) {
+    if (this.props.review_count === 0) {
       return <div />;
     }
     if (this.state.wordcloud_texture_isvisible === true) {
