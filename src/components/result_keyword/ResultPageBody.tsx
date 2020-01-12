@@ -49,6 +49,7 @@ export default class ResultPageBody extends React.Component<Props, State> {
         <Col md={6}>
           <DropdownButton
             id="recipe_order_button"
+            className="mb-3"
             title="表示順"
             variant="secondary"
           >
